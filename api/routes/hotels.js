@@ -1,5 +1,6 @@
 const express = require("express");
 const  Hotel  = require("../models/Hotel.js");
+const  createError  = require("../utils/error.js");
 
 const router = express.Router()
 
@@ -36,13 +37,13 @@ router.delete("/:id", async(req,res)=>{
     }
 })
 
-router.get("/", async(req,res)=>{
+router.get("/", async(req,res,next)=>{
     try{
         const hotels = await Hotel.find()
         res.status(200).json(hotels)
     }
     catch(error){
-        res.status(500).json(error)
+        return next(error)
     }
 })
 
