@@ -1,5 +1,6 @@
 const Hotel = require("../models/Hotel.js")
 
+
 const createHotel = async(req,res,next) =>{
     const { name, type, city, address, distance, title, desc, cheapestPrice } = req.body
     const newHotel = new Hotel({
