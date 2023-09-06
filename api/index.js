@@ -13,7 +13,8 @@ require('dotenv').config()
 const dotenv = require('dotenv')
 const mongoose = require('mongoose')
 
-const MONGO_URI = "mongodb+srv://Roshaan:roshaan@roshaan.lwu23.mongodb.net/booking-app"
+// const MONGO_URI = "mongodb+srv://Roshaan:roshaan@roshaan.lwu23.mongodb.net/booking-app"
+const MONGO_URI = process.env.MONGO_URI
 
 const authRouter = require("./routes/auth.js")
 const hotelsRouter = require("./routes/hotels.js")
