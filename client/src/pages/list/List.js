@@ -1,6 +1,12 @@
+import Header from "../../components/header/Header"
+import Navbar from "../../components/navbar/Navbar"
+
 const List = () => {
     return(
-        <h1>List</h1>
+        <>
+            <Navbar/>
+            <Header type="list"/>
+        </>
     )
 }
 
